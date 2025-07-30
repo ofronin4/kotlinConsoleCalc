@@ -27,8 +27,6 @@ class Calculations ():Digits() {
 
             }
         }
-        println("Result of $userOption of $firstNumber and $secondNumber is:  $result")
+        println("Result of $userOption of $firstNumber to $secondNumber is:  $result")
     }
     }
-
-}
