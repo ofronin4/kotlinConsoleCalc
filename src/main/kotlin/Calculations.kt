@@ -1,3 +1,5 @@
+import kotlin.system.exitProcess
+
 class Calculations ():Digits() {
     fun ChOption() {
         digits()
@@ -15,10 +17,18 @@ class Calculations ():Digits() {
                 userOption = "multiplication"
             }
             "4", "divide", "Divide", "/" -> {
-                result = firstNumber / secondNumber;
-                userOption = "division"
+                if (firstNumber == 0.0 || secondNumber == 0.0 ){
+                    println("Division to zero is impossible")
+                    exitProcess(0)
+                } else{
+                    result = firstNumber / secondNumber;
+                    userOption = "division"
+                }
+
             }
         }
         println("Result of $userOption of $firstNumber and $secondNumber is:  $result")
     }
+    }
+
 }
