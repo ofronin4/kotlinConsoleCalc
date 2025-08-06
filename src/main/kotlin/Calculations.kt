@@ -4,7 +4,7 @@ class Calculations ():Digits() {
     fun ChOption() {
         digits()
         var result = 0.0
-        println("enter option:\n1)Plus  \"+\" \n1)Minus  \"-\" \n3)Multiply  \"*\" \n4)Divide  \"/\" ")
+        println("enter option:\n1)Plus  \"+\" \n2)Minus  \"-\" \n3)Multiply  \"*\" \n4)Divide  \"/\" ")
         var userOption = readLine()
 
         when (userOption) {
@@ -17,7 +17,7 @@ class Calculations ():Digits() {
                 userOption = "multiplication"
             }
             "4", "divide", "Divide", "/" -> {
-                if (firstNumber == 0.0 || secondNumber == 0.0 ){
+                if (secondNumber == 0.0){
                     println("Division to zero is impossible")
                     exitProcess(0)
                 } else{
